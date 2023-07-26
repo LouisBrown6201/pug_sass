@@ -1,0 +1,116 @@
+$gray: #635f85;
+$gray-light: #e7e7e7;
+$gray-lighter: #f4f6fd;
+$gray-dark: #051441;
+$gray-blur: #7f8ea1;
+$gray-blur-dark: #6b7d92;
+$primary-color: #ff7d00;
+$secondary-color: #5a73e5;
+$third-color: #f4a11a;
+
+:root{
+    --section-spacing: 140px;
+
+    @media screen and (max-width: 1023px){
+        --section-spacing: 70px;
+    }
+
+    @media screen and (max-width: 767px){
+        --section-spacing: 50px;
+    }
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Poppins', san-serif;
+    line-height: 1;
+    color: $gray;
+    font-size: 16px;
+}
+
+.container{
+    max-width: 1170px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+    font-family: 'Poppins' san-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    background-color: transparent;
+    border-radius: 100rem;
+    padding: 13px 32px;
+    cursor: pointer;
+
+    &--primary{
+        color: white;
+        line-height: 1.5;
+        background: linear-gradient(103.38deg, #f67102 5.1%, #f4a91e 86.29%);
+    }
+
+    &--secondary{
+        color: $primary-color;
+        border: 2px solid $gray-light;
+    }
+}
+
+.global{
+    &__caption{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: 0.185em;
+        display: block;
+        color: $primary-color;
+    }
+
+    &__heading{
+        color: $gray-dark;;
+        font-weight: bold;
+        &--huge{
+            font-size: 50px;
+            line-height: calc(56/50);
+        }
+        &--big{
+            font-size: 40px;
+            line-height: calc(50/40);
+        }
+        &--normal{
+            font-size: 21px;
+            line-height: calc(31.5/21);
+            font-weight: 600;
+        }
+    }
+
+    &__text{
+        font-size: 16px;
+        line-height: calc(26/16);
+        color: $gray-blur;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .button{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .global__heading{
+        &--big{
+            font-size: 30px;
+        }
+    }
+}

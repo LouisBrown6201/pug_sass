@@ -1,0 +1,42 @@
+.mission{
+    padding: 117px 20px 89px;
+    background-color: #f4f8fd;
+    margin-bottom: var(--section-spacing);
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 26px;
+    }
+
+    &__content{
+        max-width: 502px;
+        width: 100%;
+    }
+
+    .global__heading{
+        max-width: 443px;
+        margin-bottom: 25px;
+    }
+
+    .global__caption{
+        margin-bottom: 18px;
+    }
+
+    .global__text{
+        margin-bottom: 34px;
+    }
+    
+    @media screen and (max-width: 1023px) {
+        padding: 70px 0;
+        &__container {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        &__content {
+          max-width: 100%;
+        }
+      }
+}

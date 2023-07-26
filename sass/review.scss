@@ -1,0 +1,143 @@
+.review{
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--section-spacing)
+    }
+
+    &__content{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &__number{
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        color: $gray-blur;
+    }
+
+    &__count{
+        font-weight: 600;
+        font-size: 25px;
+        color: $third-color;
+    }
+
+    &__list{
+        width: 100%;
+        max-width: 523px;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        position: relative;
+        padding-left: 40px;
+    }
+
+    &__card{
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 8px 55px rgba(155, 162, 173, 0.17);
+        border-radius: 10px;
+        padding: 25px;
+        position: relative;
+        & + .review__card{
+            margin-top: 20px;
+        }
+    }
+
+    &__rating{
+        display: flex;
+        align-items: center;
+        gap: 0 3px;
+        font-style: 8px;
+        color: black;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+
+    &__avatar{
+        width: 50px;
+        height: 50px;
+        border-radius: 100rem;
+        margin-bottom: 7px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__name{
+        color: $gray-dark;
+        font-weight: 500;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    &__job{
+        font-weight: 500;
+        font-size: 7px;
+        color: $gray-blur-dark;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    &__desc{
+        font-size: 10px;
+        line-height: 14px;
+        color: #79899d;
+        margin-bottom: 24px;
+    }
+
+    &__quote img{
+        margin-left: auto;
+    }
+
+    .global__caption{
+        text-transform: none;
+        margin-bottom: 11px;
+    }
+
+    .global__heading{
+        margin-bottom: 25px;
+    }
+
+    .global__text {
+        margin-bottom: 20px;
+    }
+    
+    &__bg {
+    position: absolute;
+    }
+
+    @media screen and (max-width: 1023px) {
+        &__container {
+          flex-direction: column;
+          gap: 35px;
+        }
+
+        &__content {
+          max-width: 100%;
+        }
+
+        &__list {
+          padding-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &__list {
+          max-width: 100%;
+          grid-template-columns: 1fr;
+        }
+
+        &__bg {
+          display: none;
+        }
+    }
+}

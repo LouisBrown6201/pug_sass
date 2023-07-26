@@ -1,0 +1,46 @@
+.who{
+    padding-bottom: var(--section-spacing);
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 87px;
+    }
+
+    &__image{
+        width: 100%;
+        max-width: 600px;
+    }
+
+    &__content{
+        flex: 1;
+    }
+
+    .global__heading{
+        max-width: 422px;
+    }
+
+    .global__caption,
+    .global__heading{
+        margin-bottom: 25px;
+    }
+
+    .global__text{
+        margin-bottom: 37px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        &__container {
+          gap: 30px;
+          flex-direction: column;
+        }
+
+        &__image {
+          max-width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+}
